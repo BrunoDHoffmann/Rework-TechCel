@@ -1,0 +1,8 @@
+{
+  "name": "Rework TechCel — Assistência Técnica Especializada",
+  "description": "Landing page oficial da Rework TechCel em Sapucaia do Sul: conserto de celulares, tablets e controles de videogame com orçamento gratuito e diagnóstico de bancada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
