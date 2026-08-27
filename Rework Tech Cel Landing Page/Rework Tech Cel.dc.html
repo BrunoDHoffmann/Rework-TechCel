@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/broadsheet-8f874517-0935-4f05-ac01-99d78fbdc4f0/styles.css">
+<script src="_ds/broadsheet-8f874517-0935-4f05-ac01-99d78fbdc4f0/_ds_bundle.js"></script>
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #bcd6f5; color: var(--color-text); text-wrap: pretty; font-family: var(--font-body); }
+  a { color: var(--color-accent-700); text-decoration: none; }
+  a:hover { color: var(--color-accent-2); }
+  * { box-sizing: border-box; }
+  @keyframes rtc-pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); } 70% { box-shadow: 0 0 0 16px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+  .rtc-card { transition: transform .18s ease, box-shadow .18s ease; }
+  .rtc-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  details.rtc-faq[open] .rtc-faq-plus { transform: rotate(45deg); }
+  details.rtc-faq summary::-webkit-details-marker { display: none; }
+  @media (max-width: 900px) {
+    .rtc-hero { grid-template-columns: 1fr !important; }
+    .rtc-trust { grid-template-columns: repeat(2, 1fr) !important; }
+    .rtc-services { grid-template-columns: repeat(2, 1fr) !important; }
+    .rtc-steps { grid-template-columns: repeat(2, 1fr) !important; }
+    .rtc-about { grid-template-columns: 1fr !important; }
+    .rtc-local { grid-template-columns: 1fr !important; }
+    .rtc-footer { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 620px) {
+    .rtc-navlinks a:not(.btn) { display: none !important; }
+    .rtc-trust, .rtc-services, .rtc-steps, .rtc-footer { grid-template-columns: 1fr !important; }
+    .rtc-hero { text-align: left; }
+    .rtc-hero-fig { max-height: 340px; }
+    h1 { font-size: clamp(30px, 9vw, 42px) !important; }
+  }
+</style>
+</helmet>
+<div style="--brand: {{ brand }}; --brand-deep: {{ brandDeep }}; --brand-tint: {{ brandTint }}; --brand-tint2: {{ brandTint2 }};">
+
+  <nav style="position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, #bcd6f5 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 14px clamp(20px, 5vw, 64px); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 11px;">
+        <span style="width: 34px; height: 34px; border-radius: 9px; background: var(--brand); color: #fff; display: inline-flex; align-items: center; justify-content: center;"><i class="ph-duotone ph-wrench" style="font-size: 20px;"></i></span>
+        <span style="font-family: var(--font-heading); font-weight: 700; font-size: 21px; letter-spacing: -0.02em;">Rework Tech Cel</span>
+      </div>
+      <div class="rtc-navlinks" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+        <a href="#servicos" style="font-size: 14.5px; color: var(--color-text);">Serviços</a>
+        <a href="#comofunciona" style="font-size: 14.5px; color: var(--color-text);">Como funciona</a>
+        <a href="#sobre" style="font-size: 14.5px; color: var(--color-text);">Sobre</a>
+        <a href="#local" style="font-size: 14.5px; color: var(--color-text);">Localização</a>
+        <a class="btn btn-primary" href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px;"><i class="ph-fill ph-whatsapp-logo" style="font-size: 18px;"></i>Orçamento grátis</a>
+      </div>
+    </div>
+  </nav>
+
+  <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px);">
+
+    <section class="rtc-hero" style="margin: clamp(28px, 4vw, 48px) 0 0; background: var(--brand-tint); border-radius: 20px; padding: clamp(32px, 5vw, 60px); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(28px, 5vw, 56px); align-items: center;">
+      <div>
+        <span style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: var(--brand-deep); background: #ffffff; border-radius: 999px; padding: 6px 13px;"><i class="ph-fill ph-map-pin" style="font-size: 14px;"></i>Sapucaia do Sul · RS</span>
+        <h1 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(36px, 5.4vw, 62px); line-height: 1.05; letter-spacing: -0.022em; margin: 20px 0 0;">Conserto rápido do seu celular, tablet e videogame</h1>
+        <p style="font-size: 17.5px; line-height: 1.6; max-width: 46ch; margin: 20px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">Troca de tela, bateria, botões, conectores e downgrade de Android. Diagnóstico honesto, mão de obra especializada e <strong>orçamento gratuito</strong>.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;">
+          <a class="btn btn-primary" href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; font-size: 15.5px; padding: 12px 20px;"><i class="ph-fill ph-whatsapp-logo" style="font-size: 20px;"></i>Falar no WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+5551993557167" style="display: inline-flex; align-items: center; gap: 9px; font-size: 15.5px; padding: 12px 20px; background: #ffffff;"><i class="ph-duotone ph-phone" style="font-size: 18px;"></i>+55 51 99355-7167</a>
+        </div>
+        <div style="display: flex; gap: 22px; flex-wrap: wrap; margin-top: 26px; font-size: 13.5px; color: color-mix(in srgb, var(--color-text) 72%, transparent);">
+          <span style="display: inline-flex; align-items: center; gap: 7px;"><i class="ph-fill ph-check-circle" style="font-size: 16px; color: var(--brand);"></i>Orçamento sem custo</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px;"><i class="ph-fill ph-check-circle" style="font-size: 16px; color: var(--brand);"></i>Garantia no serviço</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px;"><i class="ph-fill ph-check-circle" style="font-size: 16px; color: var(--brand);"></i>Atendimento rápido</span>
+        </div>
+      </div>
+      <figure class="cmyk rtc-hero-fig" style="margin: 0; border-radius: 16px; overflow: hidden;">
+        <div class="print" style="aspect-ratio: 4 / 5;">
+          <image-slot id="rtc-hero" shape="rect" placeholder="Foto da bancada / reparo" role="img" aria-label="Serviço de assistência técnica"></image-slot>
+        </div>
+      </figure>
+    </section>
+
+    <section class="rtc-trust" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px;">
+      <div style="display: flex; align-items: center; gap: 13px; padding: 18px; border: 1px solid var(--brand-tint2); border-radius: 14px;"><i class="ph-duotone ph-currency-circle-dollar" style="font-size: 30px; color: var(--brand);"></i><div><div style="font-family: var(--font-heading); font-weight: 700; font-size: 16px;">Orçamento grátis</div><div style="font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Sem compromisso</div></div></div>
+      <div style="display: flex; align-items: center; gap: 13px; padding: 18px; border: 1px solid var(--brand-tint2); border-radius: 14px;"><i class="ph-duotone ph-seal-check" style="font-size: 30px; color: var(--brand);"></i><div><div style="font-family: var(--font-heading); font-weight: 700; font-size: 16px;">Garantia</div><div style="font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent);">No serviço realizado</div></div></div>
+      <div style="display: flex; align-items: center; gap: 13px; padding: 18px; border: 1px solid var(--brand-tint2); border-radius: 14px;"><i class="ph-duotone ph-lightning" style="font-size: 30px; color: var(--brand);"></i><div><div style="font-family: var(--font-heading); font-weight: 700; font-size: 16px;">Agilidade</div><div style="font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Reparo em 24–72h</div></div></div>
+      <div style="display: flex; align-items: center; gap: 13px; padding: 18px; border: 1px solid var(--brand-tint2); border-radius: 14px;"><i class="ph-duotone ph-hand-heart" style="font-size: 30px; color: var(--brand);"></i><div><div style="font-family: var(--font-heading); font-weight: 700; font-size: 16px;">Atendimento direto</div><div style="font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent);">Com a própria técnica</div></div></div>
+    </section>
+
+    <section id="servicos" style="padding: clamp(48px, 6vw, 84px) 0 clamp(32px, 4vw, 48px);">
+      <div style="text-align: center; max-width: 46ch; margin: 0 auto;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-deep);">Serviços</span>
+        <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.12; letter-spacing: -0.018em; margin: 12px 0 0;">Do reparo comum ao mais delicado</h2>
+        <p style="font-size: 16px; line-height: 1.6; margin: 14px 0 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Celulares, tablets e controles de videogame passam pela mesma bancada e pelo mesmo cuidado.</p>
+      </div>
+      <div class="rtc-services" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px;">
+        <div class="rtc-card" style="border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent); border-radius: 16px; padding: 26px; background: #ffffff;"><span style="width: 52px; height: 52px; border-radius: 13px; background: var(--brand-tint); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;"><i class="ph-duotone ph-device-mobile" style="font-size: 28px;"></i></span><h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 8px;">Troca de tela</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Displays e touch trincados ou sem imagem em celulares e tablets, com peças testadas.</p></div>
+        <div class="rtc-card" style="border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent); border-radius: 16px; padding: 26px; background: #ffffff;"><span style="width: 52px; height: 52px; border-radius: 13px; background: var(--brand-tint); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;"><i class="ph-duotone ph-battery-charging" style="font-size: 28px;"></i></span><h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 8px;">Troca de bateria</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Baterias viciadas, que descarregam rápido ou estufam — com verificação de carga e consumo.</p></div>
+        <div class="rtc-card" style="border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent); border-radius: 16px; padding: 26px; background: #ffffff;"><span style="width: 52px; height: 52px; border-radius: 13px; background: var(--brand-tint); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;"><i class="ph-duotone ph-plugs-connected" style="font-size: 28px;"></i></span><h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 8px;">Botões e conectores</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Power, volume, home e conectores de carga sem contato ou com mau funcionamento.</p></div>
+        <div class="rtc-card" style="border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent); border-radius: 16px; padding: 26px; background: #ffffff;"><span style="width: 52px; height: 52px; border-radius: 13px; background: var(--brand-tint); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;"><i class="ph-duotone ph-game-controller" style="font-size: 28px;"></i></span><h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 8px;">Controles de videogame</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Drift de analógico, gatilhos, botões e conectores de carga — especialidade da casa.</p></div>
+        <div class="rtc-card" style="border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent); border-radius: 16px; padding: 26px; background: #ffffff;"><span style="width: 52px; height: 52px; border-radius: 13px; background: var(--brand-tint); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;"><i class="ph-duotone ph-arrow-counter-clockwise" style="font-size: 28px;"></i></span><h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 8px;">Downgrade de Android</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Retorno a versões estáveis do sistema, corrigindo travamentos e problemas de desempenho.</p></div>
+        <div class="rtc-card" style="border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent); border-radius: 16px; padding: 26px; background: #ffffff;"><span style="width: 52px; height: 52px; border-radius: 13px; background: var(--brand-tint); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;"><i class="ph-duotone ph-wrench" style="font-size: 28px;"></i></span><h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 8px;">Diagnóstico e outros</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Não achou seu problema? Análise de placa, limpeza, oxidação e serviços gerais de assistência.</p></div>
+      </div>
+    </section>
+
+    <section id="comofunciona" style="padding: clamp(36px, 5vw, 64px) 0;">
+      <div style="text-align: center; max-width: 46ch; margin: 0 auto 44px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-deep);">Como funciona</span>
+        <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.12; letter-spacing: -0.018em; margin: 12px 0 0;">Quatro passos até o aparelho pronto</h2>
+      </div>
+      <div class="rtc-steps" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+        <div style="text-align: center;"><div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; font-size: 24px;">1</div><h3 style="font-family: var(--font-heading); font-size: 18px; margin: 0 0 6px;">Você chama</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Manda mensagem no WhatsApp descrevendo o defeito do aparelho.</p></div>
+        <div style="text-align: center;"><div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; font-size: 24px;">2</div><h3 style="font-family: var(--font-heading); font-size: 18px; margin: 0 0 6px;">Diagnóstico</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Avaliação técnica e orçamento gratuito, sem surpresas.</p></div>
+        <div style="text-align: center;"><div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; font-size: 24px;">3</div><h3 style="font-family: var(--font-heading); font-size: 18px; margin: 0 0 6px;">Reparo</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Aprovado o orçamento, o serviço é feito com peças e ferramentas adequadas.</p></div>
+        <div style="text-align: center;"><div style="width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%; background: var(--brand); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; font-size: 24px;">4</div><h3 style="font-family: var(--font-heading); font-size: 18px; margin: 0 0 6px;">Testes e retirada</h3><p style="font-size: 14.5px; line-height: 1.6; margin: 0; color: color-mix(in srgb, var(--color-text) 76%, transparent);">Aparelho testado, entregue funcionando e com garantia.</p></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="rtc-about" style="padding: clamp(40px, 6vw, 72px) 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px); align-items: center;">
+      <figure class="cmyk" style="margin: 0; border-radius: 16px; overflow: hidden;">
+        <div class="print" style="aspect-ratio: 4 / 5;">
+          <image-slot id="rtc-tecnica" shape="rect" placeholder="Foto da Alexandra na bancada" role="img" aria-label="Alexandra Fernandez Dubal, técnica responsável"></image-slot>
+        </div>
+      </figure>
+      <div>
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-deep);">A técnica</span>
+        <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.12; letter-spacing: -0.018em; margin: 12px 0 0;">Alexandra Fernandez Dubal</h2>
+        <p style="font-size: 16.5px; line-height: 1.68; margin: 20px 0 0; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 84%, transparent);">À frente da Rework Tech Cel, Alexandra faz o reparo do início ao fim — do diagnóstico à entrega. Atendimento direto, explicando o que o aparelho tem e o que precisa ser feito, sem enrolação. Cada serviço é testado antes de voltar para as suas mãos.</p>
+        <a class="btn btn-primary" href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; margin-top: 24px;"><i class="ph-fill ph-whatsapp-logo" style="font-size: 20px;"></i>Falar com a Alexandra</a>
+      </div>
+    </section>
+
+    <section style="padding: clamp(36px, 5vw, 64px) 0;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-deep);">Perguntas frequentes</span>
+        <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.12; letter-spacing: -0.018em; margin: 12px 0 0;">Dúvidas comuns</h2>
+      </div>
+      <div style="max-width: 780px; margin: 0 auto;">
+        <details class="rtc-faq" open="{{ openFirstFaq }}" style="border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-family: var(--font-heading); font-size: 19px;">O orçamento é mesmo gratuito?<span class="rtc-faq-plus" style="transition: transform .2s; color: var(--brand); font-size: 24px; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.65; margin: 0 0 20px; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Sim. A avaliação do aparelho e o orçamento não têm custo. Você só paga se aprovar o serviço.</p>
+        </details>
+        <details class="rtc-faq" style="border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-family: var(--font-heading); font-size: 19px;">Vocês consertam controle de videogame?<span class="rtc-faq-plus" style="transition: transform .2s; color: var(--brand); font-size: 24px; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.65; margin: 0 0 20px; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Sim, é uma das nossas especialidades: drift de analógico, botões, gatilhos e conectores de carga.</p>
+        </details>
+        <details class="rtc-faq" style="border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-family: var(--font-heading); font-size: 19px;">Quanto tempo leva o reparo?<span class="rtc-faq-plus" style="transition: transform .2s; color: var(--brand); font-size: 24px; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.65; margin: 0 0 20px; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Depende do serviço e da disponibilidade de peças. A maioria fica pronta entre 24 e 72 horas — o prazo é combinado no orçamento.</p>
+        </details>
+        <details class="rtc-faq" style="border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-family: var(--font-heading); font-size: 19px;">Fazem downgrade de Android?<span class="rtc-faq-plus" style="transition: transform .2s; color: var(--brand); font-size: 24px; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.65; margin: 0 0 20px; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Sim, quando o aparelho permite. Voltamos a uma versão estável do sistema para corrigir travamentos e problemas de desempenho.</p>
+        </details>
+        <details class="rtc-faq" style="border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-family: var(--font-heading); font-size: 19px;">Precisa agendar?<span class="rtc-faq-plus" style="transition: transform .2s; color: var(--brand); font-size: 24px; line-height: 1;">+</span></summary>
+          <p style="font-size: 15px; line-height: 1.65; margin: 0 0 20px; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Chame no WhatsApp antes de ir até a loja — assim confirmamos o atendimento e já adiantamos as informações do seu aparelho.</p>
+        </details>
+      </div>
+    </section>
+
+    <section style="margin: clamp(24px, 4vw, 44px) 0; background: var(--brand-tint); border-radius: 20px; padding: clamp(36px, 5vw, 56px); text-align: center;">
+      <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.12; letter-spacing: -0.018em; margin: 0;">Seu aparelho com defeito? Chame agora.</h2>
+      <p style="font-size: 16.5px; line-height: 1.6; margin: 14px auto 0; max-width: 48ch; color: color-mix(in srgb, var(--color-text) 80%, transparent);">Mande uma mensagem, descreva o problema e receba um orçamento gratuito.</p>
+      <a class="btn btn-primary" href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; font-size: 16px; padding: 13px 24px;"><i class="ph-fill ph-whatsapp-logo" style="font-size: 22px;"></i>Orçamento gratuito no WhatsApp</a>
+    </section>
+
+    <section id="local" class="rtc-local" style="padding: clamp(24px, 4vw, 40px) 0 clamp(36px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(28px, 5vw, 64px); align-items: start;">
+      <div>
+        <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-deep);">Onde estamos</span>
+        <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.12; letter-spacing: -0.018em; margin: 12px 0 22px;">Walderez, Sapucaia do Sul</h2>
+        <p style="display: flex; align-items: flex-start; gap: 11px; font-size: 16px; line-height: 1.6; margin: 0;"><i class="ph-duotone ph-map-pin" style="font-size: 22px; color: var(--brand); flex: none;"></i><span>Rua Maria Alves da Silveira, 130<br>Bairro Walderez — Sapucaia do Sul / RS<br>CEP 93226-512</span></p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 22px;">
+          <a href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 11px; font-size: 16px; color: var(--color-text);"><i class="ph-fill ph-whatsapp-logo" style="font-size: 22px; color: #25d366;"></i>+55 51 99355-7167</a>
+          <span style="display: inline-flex; align-items: center; gap: 11px; font-size: 15px; color: color-mix(in srgb, var(--color-text) 78%, transparent);"><i class="ph-duotone ph-identification-card" style="font-size: 22px; color: var(--brand);"></i>CNPJ 67.210.226/0001-98</span>
+        </div>
+        <a class="btn btn-primary" href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; margin-top: 24px;"><i class="ph-fill ph-whatsapp-logo" style="font-size: 20px;"></i>Pedir orçamento gratuito</a>
+      </div>
+      <div style="border: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm);">
+        <iframe title="Mapa - Rework Tech Cel" src="https://www.google.com/maps?q=Rua%20Maria%20Alves%20da%20Silveira%20130%2C%20Sapucaia%20do%20Sul%2C%20RS%2C%2093226-512&output=embed" style="width: 100%; height: 360px; border: 0; display: block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <footer style="border-top: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);">
+    <div class="rtc-footer" style="max-width: 1180px; margin: 0 auto; padding: 44px clamp(20px, 5vw, 64px) 120px; display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 28px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 30px; height: 30px; border-radius: 8px; background: var(--brand); color: #fff; display: inline-flex; align-items: center; justify-content: center;"><i class="ph-duotone ph-wrench" style="font-size: 18px;"></i></span><span style="font-family: var(--font-heading); font-weight: 700; font-size: 19px; letter-spacing: -0.02em;">Rework Tech Cel</span></div>
+        <p style="font-size: 14px; line-height: 1.6; margin: 14px 0 0; color: color-mix(in srgb, var(--color-text) 72%, transparent);">Assistência técnica de celulares, tablets e controles de videogame. Orçamento gratuito.</p>
+      </div>
+      <div style="font-size: 14px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 78%, transparent);">
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 58%, transparent); margin-bottom: 10px;">Contato</div>
+        <a href="{{ waLink }}" target="_blank" rel="noopener" style="color: var(--color-text);">+55 51 99355-7167</a><br>
+        Rua Maria Alves da Silveira, 130<br>Walderez — Sapucaia do Sul / RS
+      </div>
+      <div style="font-size: 14px; line-height: 1.7;">
+        <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 58%, transparent); margin-bottom: 10px;">Redes</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="https://www.facebook.com/alexandra.dubal?locale=pt_BR" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px;"><i class="ph-fill ph-facebook-logo" style="font-size: 18px;"></i>Facebook</a>
+          <a href="https://www.instagram.com/alexandradubal/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px;"><i class="ph-fill ph-instagram-logo" style="font-size: 18px;"></i>Instagram</a>
+        </div>
+        <div style="font-size: 12px; margin-top: 16px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">CNPJ 67.210.226/0001-98</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<a href="{{ waLink }}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" style="position: fixed; right: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px); width: 60px; height: 60px; border-radius: 50%; background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,.22); animation: rtc-pulse 2.4s infinite; z-index: 50;">
+  <i class="ph-fill ph-whatsapp-logo" style="font-size: 34px;"></i>
+</a>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900},&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ciano&quot;,&quot;Magenta&quot;],&quot;default&quot;:&quot;Ciano&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Aparência&quot;},&quot;openFirstFaq&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? "Ciano";
+    const magenta = accent === "Magenta";
+    const msg = encodeURIComponent("Olá! Gostaria de um orçamento gratuito para o meu aparelho.");
+    return {
+      brand: magenta ? "var(--color-accent-2)" : "var(--color-accent)",
+      brandDeep: magenta ? "var(--color-accent-2-700)" : "var(--color-accent-700)",
+      brandTint: magenta ? "var(--color-accent-2-100)" : "var(--color-accent-100)",
+      brandTint2: magenta ? "var(--color-accent-2-200)" : "var(--color-accent-200)",
+      openFirstFaq: this.props.openFirstFaq ?? true,
+      waLink: "https://wa.me/5551993557167?text=" + msg,
+    };
+  }
+}
+</script>
+</body>
+</html>
