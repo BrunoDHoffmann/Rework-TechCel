@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "rework-backend"
+version = "0.1.0"
+description = "API de gerenciamento de estoque de peças de manutenção"
+authors = ["Bruno Hoffmann <bruno@dreamscapehr.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.0"
+uvicorn = {extras = ["standard"], version = "^0.32.0"}
+sqlalchemy = "^2.0.36"
+psycopg2-binary = "^2.9.10"
+pydantic = "^2.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
